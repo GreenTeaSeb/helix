@@ -18,3 +18,4 @@ render = true
 
 [keys.insert]
 C-space = "completion"
+

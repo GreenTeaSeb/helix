@@ -44,3 +44,13 @@ inlayHints.variableTypes.enabled = true
 inlayHints.propertyDeclarationTypes.enabled  = true
 inlayHints.functionLikeReturnTypes.enabled = true
 inlayHints.enumMemberValues.enabled = true
+
+
+[language-server.solargraph]
+config.diagnostics=true
+config.formatting=false
+
+[[language]]
+name = "ruby"
+formatter = { command = "rubocop", args = ["--stdin", "foo.rb", "-a", "--stderr", "--fail-level", "fatal", "--server"] }
+language-servers=[{name="solargraph"}]
